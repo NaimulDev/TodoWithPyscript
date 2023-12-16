@@ -9,12 +9,38 @@
       type="module"
       src="https://pyscript.net/snapshots/2023.09.1.RC2/core.js"
     ></script>
+     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"> -->
+     <title>PyScript todo Application</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ffc7c8',
+            secondary: '#ff7fb0',
+          }
+        }
+      }
+    }
+  </script>
   </head>
-  <body>
-    <h2>Simple Todo App with pyscript</h2>
-    <input type="text" id="todoInp" />
-    <button id="createTodoBtn">Create</button>
-    <table id="todosTable"></table>
+  <body class="bg-[#eeeeee]">
+ 
+      <h2 class="text-2xl text-center">What is in your mind?</h2>
+
+
+    <section class=" text-center bg-primary w-[300px] h-[530px] mx-auto mt-6 rounded-3xl shadow-2xl">   
+
+      <div class="pt-6"> 
+        <input  class="w-16 md:w-32 px-4 py-1 mt-2 mb-4 border rounded-2xl focus:outline-none focus:border-secondary transition-all duration-300"
+        placeholder="Entr ur todo" type="text" id="todoInp" />
+        <button class="py-1 px-2 ml-2 rounded-2xl bg-secondary" id="createTodoBtn">Create</button>
+        <table class="text-center mx-auto py-4 px-4 " id="todosTable"></table>
+          </div>
+   
+    </section>
     <script type="py" src="./main.py" config="appConfig.toml"></script>
   </body>
 </html>

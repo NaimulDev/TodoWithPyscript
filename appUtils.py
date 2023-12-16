@@ -9,6 +9,8 @@ def createTodoElement(todoTxt:str):
     deleteBtn.style.marginBottom = "0.5em"
     deleteBtn.classList.add("btn")
     deleteBtn.classList.add("btn-danger")
+    deleteBtn.style.padding = "10px"
+    deleteBtn.style.backgroundColor = "#ff7fb0"
 
     todoRowEl = document.createElement("tr")
     todoLabelCell = document.createElement("td")
@@ -17,6 +19,12 @@ def createTodoElement(todoTxt:str):
     todoDelBtnCell.appendChild(deleteBtn)
     todoRowEl.appendChild(todoLabelCell)
     todoRowEl.appendChild(todoDelBtnCell)
+
+    todoRowEl.style.backgroundColor = "#f2f2f2"
+    todoRowEl.style.padding = "10px"
+    todoRowEl.style.border = "1px solid #ddd"
+    todoRowEl.style.boxShadow = "0 20px 50px rgba(240, 46, 170, 0.7)"
+
 
     def del_task(evt):
         print("Deleting task...")
